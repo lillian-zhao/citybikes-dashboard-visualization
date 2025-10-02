@@ -17,6 +17,10 @@ function parse_network(data){
     // CHALLENGE 1.1
     // Your code here
     // use .set() to add the data to the Map
+    network_data.set("name", data.network.name);
+    network_data.set("city", data.network.location.city);
+    network_data.set("latitude", data.network.location.latitude);
+    network_data.set("longitude", data.network.location.longitude);
 
     // Convert the Map to a plain object that can be indexed into similar to a dictionary and an array before returning
     return Object.fromEntries(network_data);
